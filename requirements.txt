@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+easyocr
+opencv-python-headless
+numpy
+python-Levenshtein
+pydantic
+Pillow
+requests
+piexif
+torch
+torchvision
