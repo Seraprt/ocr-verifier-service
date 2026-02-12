@@ -1,0 +1,27 @@
+{
+  "game": "dls",
+  "teamSize": 1,
+  "layoutVersion": "v1",
+  "roi": {
+    "left_user": [0.08, 0.08, 0.36, 0.14],
+    "right_user": [0.64, 0.08, 0.92, 0.14],
+
+    "score_block": [0.44, 0.16, 0.56, 0.22],
+    "clock_full_time": [0.46, 0.22, 0.54, 0.26],
+
+    "left_possession": [0.18, 0.30, 0.26, 0.34],
+    "right_possession": [0.74, 0.30, 0.82, 0.34],
+
+    "left_shots": [0.28, 0.42, 0.34, 0.46],
+    "right_shots": [0.66, 0.42, 0.72, 0.46],
+
+    "left_shot_accuracy": [0.18, 0.48, 0.26, 0.52],
+    "right_shot_accuracy": [0.74, 0.48, 0.82, 0.52]
+  },
+  "labels": {
+    "full_time": ["90:00", "Full Time", "Fin du match", "Finalizado"],
+    "shots": ["Shots", "Tiros", "Tirs", "Schüsse"],
+    "shot_accuracy": ["Shot Accuracy", "Precisión de tiro", "Précision des tirs", "Schussgenauigkeit"],
+    "possession": ["Possession", "Posesión", "Possesso", "Ballbesitz"]
+  }
+}

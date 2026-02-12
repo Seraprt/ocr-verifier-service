@@ -1,0 +1,31 @@
+{
+  "game": "efootball",
+  "teamSize": 1,
+  "layoutVersion": "v1",
+  "roi": {
+    "title_full_time": [0.40, 0.18, 0.60, 0.24],
+    "title_in_progress": [0.40, 0.18, 0.60, 0.24],
+
+    "teamA_user": [0.06, 0.08, 0.36, 0.14],
+    "teamB_user": [0.64, 0.08, 0.94, 0.14],
+
+    "teamA_goals": [0.45, 0.08, 0.48, 0.14],
+    "teamB_goals": [0.52, 0.08, 0.55, 0.14],
+
+    "teamA_possession": [0.20, 0.26, 0.28, 0.30],
+    "teamB_possession": [0.72, 0.26, 0.80, 0.30],
+
+    "teamA_shots_on_target": [0.20, 0.34, 0.28, 0.38],
+    "teamB_shots_on_target": [0.72, 0.34, 0.80, 0.38],
+
+    "penalties_block": [0.44, 0.20, 0.56, 0.26]  
+  },
+  "labels": {
+    "full_time": ["Full Time", "Fin du match", "Finalizado", "Terminado", "終了", "Partita terminata"],
+    "in_progress": ["1st Half", "2nd Half", "First Half", "Second Half", "Tiempo", "Temps", "半分"],
+
+    "shots_on_target": ["Shots on Target", "Tiros a puerta", "Tirs cadrés", "シュートオンターゲット", "Tiri in porta"],
+    "possession": ["Possession", "Posesión", "Possession", "ボール支配率", "Possesso"],
+    "penalties": ["PK", "Penalties", "Penaltis", "Tiri di rigore", "Пенальти"]
+  }
+}

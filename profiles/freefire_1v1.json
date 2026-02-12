@@ -1,0 +1,29 @@
+{
+  "game": "freefire",
+  "teamSize": 1,
+  "layoutVersion": "v1",
+  "roi": {
+    "left_usernames": [
+      [0.06, 0.26, 0.30, 0.30]
+    ],
+    "right_usernames": [
+      [0.70, 0.26, 0.94, 0.30]
+    ],
+    "left_kills": [
+      [0.32, 0.26, 0.36, 0.30]
+    ],
+    "right_kills": [
+      [0.64, 0.26, 0.68, 0.30]
+    ],
+    "left_damage": [
+      [0.38, 0.26, 0.46, 0.30]
+    ],
+    "right_damage": [
+      [0.54, 0.26, 0.62, 0.30]
+    ]
+  },
+  "labels": {
+    "kills": ["K", "Kills", "Eliminations"],
+    "damage": ["DMG", "Damage"]
+  }
+}

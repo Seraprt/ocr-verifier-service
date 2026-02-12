@@ -1,0 +1,27 @@
+{
+  "game": "fcm",
+  "teamSize": 1,
+  "layoutVersion": "v1",
+  "roi": {
+    "uploader_user": [0.62, 0.10, 0.90, 0.16],
+    "opponent_user": [0.08, 0.10, 0.36, 0.16],
+
+    "score_block": [0.44, 0.20, 0.56, 0.28],
+    "clock_full_time": [0.46, 0.28, 0.54, 0.32],
+
+    "opponent_shots": [0.12, 0.40, 0.24, 0.44],
+    "uploader_shots": [0.74, 0.40, 0.86, 0.44],
+
+    "opponent_sot": [0.12, 0.46, 0.24, 0.50],
+    "uploader_sot": [0.74, 0.46, 0.86, 0.50],
+
+    "opponent_possession": [0.12, 0.52, 0.24, 0.56],
+    "uploader_possession": [0.74, 0.52, 0.86, 0.56]
+  },
+  "labels": {
+    "full_time": ["90:00", "Full Time", "Fim de jogo", "Fin du match", "Finalizado"],
+    "shots": ["Shots", "Tiros", "Tirs", "Schüsse"],
+    "shots_on_goal": ["(on goal)", "(a puerta)", "(cadrés)", "(aufs Tor)"],
+    "possession": ["Possession", "Posesión", "Possesso", "Ballbesitz"]
+  }
+}
