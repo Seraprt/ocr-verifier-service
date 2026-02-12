@@ -1,17 +1,17 @@
 from fastapi import FastAPI, UploadFile, Form
 from fastapi.middleware.cors import CORSMiddleware
 import json
-from .models import ParsedResult, SideStats
-from .ocr import load_image_bytes, crop_roi, ocr_text, bytes_hash, parse_penalties, parse_clock
-from .validators import parse_int_safe, parse_percent_safe, validate_coherence_sports, normalize_label, translate_to_english, timestamps_close, pick_better_submission
-from .winner import compute_winner_sports
-from .ocr import load_image_bytes, crop_roi, ocr_text, bytes_hash
-from .validators import parse_int_safe, parse_percent_safe, normalize_label, translate_to_english, parse_score, parse_pair_numbers
-from .winner import compute_winner_fcm
+from models import ParsedResult, SideStats
+from ocr import load_image_bytes, crop_roi, ocr_text, bytes_hash, parse_penalties, parse_clock
+from validators import parse_int_safe, parse_percent_safe, validate_coherence_sports, normalize_label, translate_to_english, timestamps_close, pick_better_submission
+from winner import compute_winner_sports
+from ocr import load_image_bytes, crop_roi, ocr_text, bytes_hash
+from validators import parse_int_safe, parse_percent_safe, normalize_label, translate_to_english, parse_score, parse_pair_numbers
+from winner import compute_winner_fcm
 
-from .ocr import load_image_bytes, crop_roi, ocr_text, bytes_hash
-from .validators import parse_int_safe, fuzzy_match
-from .winner import compute_winner_freefire
+from ocr import load_image_bytes, crop_roi, ocr_text, bytes_hash
+from validators import parse_int_safe, fuzzy_match
+from winner import compute_winner_freefire
 
 
 app = FastAPI()
@@ -271,9 +271,9 @@ async def fcm_compare(payload: dict):
     }
 
 
-from .ocr import load_image_bytes, crop_roi, ocr_text, bytes_hash
-from .validators import parse_int_safe, parse_percent_safe, normalize_label, parse_score, estimate_sot, fuzzy_match
-from .winner import compute_winner_dls
+from ocr import load_image_bytes, crop_roi, ocr_text, bytes_hash
+from validators import parse_int_safe, parse_percent_safe, normalize_label, parse_score, estimate_sot, fuzzy_match
+from winner import compute_winner_dls
 
 app = FastAPI()
 app.add_middleware(
@@ -594,9 +594,9 @@ async def freefire_compare(payload: dict):
 
 
 
-from .ocr import load_image_bytes, crop_roi, ocr_text, bytes_hash
-from .validators import parse_int_safe, fuzzy_match
-from .winner import compute_winner_freefire
+from  ocr import load_image_bytes, crop_roi, ocr_text, bytes_hash
+from  validators import parse_int_safe, fuzzy_match
+from  winner import compute_winner_freefire
 
 app = FastAPI()
 
