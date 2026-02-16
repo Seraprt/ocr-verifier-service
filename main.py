@@ -23,8 +23,13 @@ app.add_middleware(
   allow_headers=["*"],
 )
 
+@app.get("/")
+def root():
+    return {"status": "OCR API is running"}
+
+
 def load_profile():
-  with open("app/profiles/efootball_1v1.json", "r", encoding="utf-8") as f:
+  with open("profiles/efootball_1v1.json", "r", encoding="utf-8") as f:
     return json.load(f)
 
 @app.post("/ocr/efootball/verify")
@@ -137,7 +142,7 @@ async def efootball_compare(payload: dict):
 
 
 def load_profile_fcm():
-    with open("app/profiles/fcm_1v1.json", "r", encoding="utf-8") as f:
+    with open("profiles/fcm_1v1.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
 @app.post("/ocr/fcm/verify")
@@ -275,17 +280,10 @@ from ocr import load_image_bytes, crop_roi, ocr_text, bytes_hash
 from validators import parse_int_safe, parse_percent_safe, normalize_label, parse_score, estimate_sot, fuzzy_match
 from winner import compute_winner_dls
 
-app = FastAPI()
-app.add_middleware(
-  CORSMiddleware,
-  allow_origins=["*"],
-  allow_credentials=True,
-  allow_methods=["*"],
-  allow_headers=["*"],
-)
+
 
 def load_profile_dls():
-    with open("app/profiles/dls_1v1.json", "r", encoding="utf-8") as f:
+    with open("profiles/dls_1v1.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
 @app.post("/ocr/dls/verify")
@@ -466,17 +464,9 @@ async def dls_compare(payload: dict):
 
 
 
-app = FastAPI()
-app.add_middleware(
-  CORSMiddleware,
-  allow_origins=["*"],
-  allow_credentials=True,
-  allow_methods=["*"],
-  allow_headers=["*"],
-)
 
 def load_profile_freefire():
-    with open("app/profiles/freefire_4v4.json", "r", encoding="utf-8") as f:
+    with open("profiles/freefire_4v4.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
 @app.post("/ocr/freefire/verify")
@@ -488,7 +478,7 @@ async def freefire_verify(
     layoutVersion: str = Form("v1"),
     image: UploadFile = UploadFile(...)
 ):
-    profile = load_profile_freefire()
+    profile = load_profile_freefire(4)
     roi = profile["roi"]
     img, raw_bytes, exif_time = load_image_bytes(image)
 
@@ -598,11 +588,11 @@ from  ocr import load_image_bytes, crop_roi, ocr_text, bytes_hash
 from  validators import parse_int_safe, fuzzy_match
 from  winner import compute_winner_freefire
 
-app = FastAPI()
+
 
 # Utility: load profile by team size
 def load_profile_freefire(team_size: int):
-    path = f"app/profiles/freefire_{team_size}v{team_size}.json"
+    path = f"profiles/freefire_{team_size}v{team_size}.json"
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 

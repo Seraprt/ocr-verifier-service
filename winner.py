@@ -21,7 +21,7 @@ def compute_winner_sports(a, b, game, allow_penalties=False, penaltiesA=None, pe
     if b_score > a_score: return "B", "percent_scoring"
     return None, "second_leg_required"
 
-  def compute_winner_fcm(a, b):
+def compute_winner_fcm(a, b):
     # Primary: goals
     if a["goals"] is not None and b["goals"] is not None:
         if a["goals"] > b["goals"]: return "A", "goals"
@@ -39,8 +39,6 @@ def compute_winner_sports(a, b, game, allow_penalties=False, penaltiesA=None, pe
 
 
 
-  
-  return None, "manual_review"
 
 
 def compute_winner_dls(a, b):
